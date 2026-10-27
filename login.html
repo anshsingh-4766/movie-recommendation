@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login — MovieSuggest</title>
+  <meta name="description" content="Login to your MovieSuggest account.">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="login">
+
+  <!-- Navbar is rendered here by js/main.js -->
+  <div id="site-header"></div>
+
+  <main class="auth-page">
+    <div class="auth-card">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9h18v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9z"/><path d="M3 9l2-5h16l-2 5"/><path d="M8 4.5 10 9M13 4.5 15 9"/></svg>
+        </span>
+        Movie<span>Suggest</span>
+      </a>
+      <h1>Welcome back</h1>
+      <p class="auth-sub">Login to continue your movie journey.</p>
+
+      <!-- Flask backend handles signup and password checks. -->
+      <form id="login-form" novalidate>
+        <div class="field">
+          <label for="login-email">Email</label>
+          <input type="email" id="login-email" placeholder="you@example.com" autocomplete="email">
+          <p class="field-error" id="error-login-email"></p>
+        </div>
+        <div class="field">
+          <label for="login-password">Password</label>
+          <input type="password" id="login-password" placeholder="••••••••" autocomplete="current-password">
+          <p class="field-error" id="error-login-password"></p>
+        </div>
+        <div class="auth-row">
+          <a href="#" id="forgot-link">Forgot Password?</a>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Login</button>
+      </form>
+
+      <div class="auth-divider"><span>or</span></div>
+      <a class="btn btn-google btn-block" href="/auth/google">Continue with Google</a>
+
+      <p class="auth-alt">Don't have an account? <a href="signup.html">Create Account</a></p>
+    </div>
+  </main>
+
+  <!-- Footer is rendered here by js/main.js -->
+  <div id="site-footer"></div>
+
+  <script src="js/movies.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

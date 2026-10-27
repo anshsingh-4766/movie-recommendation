@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile — MovieSuggest</title>
+  <meta name="description" content="Your MovieSuggest profile and activity dashboard.">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="profile">
+
+  <!-- Navbar is rendered here by js/main.js -->
+  <div id="site-header"></div>
+
+  <main class="page">
+
+    <!-- ================= PAGE HEADING ================= -->
+    <section class="page-head">
+      <div class="container">
+        <span class="kicker">Profile</span>
+        <h1 class="page-title">My Profile</h1>
+        <p class="page-sub">Your MovieSuggest activity at a glance.</p>
+      </div>
+    </section>
+
+    <!--
+      User information and activity load from the Flask backend.
+    -->
+    <section class="section" style="padding-top:12px">
+      <div class="container">
+
+        <!-- Profile card -->
+        <div class="profile-header">
+          <div class="profile-avatar" id="profile-avatar">A</div>
+          <div>
+            <h2 class="profile-name" id="profile-name">—</h2>
+            <p class="profile-email" id="profile-email">—</p>
+            <div style="margin-top:12px">
+              <button type="button" class="btn btn-ghost btn-sm" id="logout-btn" hidden>Log out</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-value" id="stat-watchlist">0</div>
+            <div class="stat-label">Movies in Watchlist</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="stat-rated">0</div>
+            <div class="stat-label">Movies Rated</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="stat-genre">—</div>
+            <div class="stat-label">Favorite Genre</div>
+          </div>
+        </div>
+
+        <!-- Watchlist preview -->
+        <div class="section-head" style="margin-top:40px">
+          <div>
+            <h2 class="section-title">Your Watchlist</h2>
+            <p class="section-sub">Movies you saved for later</p>
+          </div>
+          <a href="watchlist.html" class="view-all">Open watchlist →</a>
+        </div>
+        <div class="movie-grid" id="profile-watchlist-grid"><!-- filled by JS --></div>
+        <div class="empty-state" id="profile-empty" hidden>
+          <div class="empty-icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M6 3h12a1 1 0 0 1 1 1v16.5l-7-4-7 4V4a1 1 0 0 1 1-1z"/></svg>
+          </div>
+          <h3>Nothing here yet</h3>
+          <p>Add movies to your watchlist and they will show up on your profile.</p>
+          <a href="index.html" class="btn btn-primary">Browse Movies</a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer is rendered here by js/main.js -->
+  <div id="site-footer"></div>
+
+  <script src="js/movies.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

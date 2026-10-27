@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Details — Moviesuggest</title>
+  <meta name="description" content="Movie details, cast, rating and similar movie recommendations on Moviesuggest.">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="movie">
+
+  <!-- Navbar is rendered here by js/main.js -->
+  <div id="site-header"></div>
+
+  <main class="page">
+
+    <!-- ================= MOVIE DETAILS HERO ================= -->
+    <section class="movie-hero" id="movie-hero">
+      <div class="movie-hero-bg" id="movie-hero-bg"></div>
+      <div class="movie-hero-overlay"></div>
+      <div class="container movie-hero-content">
+        <div class="movie-poster-wrap">
+          <img id="movie-poster" src="" alt="Movie poster">
+        </div>
+        <div class="movie-info">
+          <h1 id="movie-title">Loading…</h1>
+          <div class="hero-meta" id="movie-meta"></div>
+          <p class="movie-overview" id="movie-overview"></p>
+          <p class="movie-credit"><strong>Director:</strong> <span id="movie-director">—</span></p>
+          <div class="movie-cast" id="movie-cast"></div>
+          <div class="movie-actions">
+            <a class="btn btn-primary" id="trailer-btn" target="_blank" rel="noopener" href="#">▶ Watch Trailer</a>
+            <button type="button" class="btn btn-ghost" id="watchlist-btn">+ Add to Watchlist</button>
+          </div>
+          <div class="rating-widget">
+            <p class="rating-label">Rate this movie</p>
+            <div class="stars" id="stars">
+              <button type="button" class="star" data-value="1" aria-label="1 star">★</button>
+              <button type="button" class="star" data-value="2" aria-label="2 stars">★</button>
+              <button type="button" class="star" data-value="3" aria-label="3 stars">★</button>
+              <button type="button" class="star" data-value="4" aria-label="4 stars">★</button>
+              <button type="button" class="star" data-value="5" aria-label="5 stars">★</button>
+            </div>
+            <span id="rating-feedback"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= YOU MAY ALSO LIKE ================= -->
+    <section class="section" id="similar-section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2 class="section-title">You May Also Like</h2>
+            <p class="section-sub">Similar movies from the catalog</p>
+          </div>
+        </div>
+        <p class="rec-note" id="similar-note" hidden><!-- filled by JS --></p>
+        <div class="movie-grid" id="similar-grid"><!-- filled by JS --></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer is rendered here by js/main.js -->
+  <div id="site-footer"></div>
+
+  <script src="js/movies.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

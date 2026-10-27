@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Watchlist — MovieSuggest</title>
+  <meta name="description" content="Your saved movies on MovieSuggest.">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="watchlist">
+
+  <!-- Navbar is rendered here by js/main.js -->
+  <div id="site-header"></div>
+
+  <main class="page">
+
+    <!-- ================= PAGE HEADING ================= -->
+    <section class="page-head">
+      <div class="container">
+        <span class="kicker">Watchlist</span>
+        <h1 class="page-title">My Watchlist</h1>
+        <p class="page-sub" id="watchlist-count"></p>
+      </div>
+    </section>
+
+    <!-- ================= WATCHLIST GRID ================= -->
+    <!-- The signed-in user's watchlist loads from the Flask backend. -->
+    <section class="section" style="padding-top:12px">
+      <div class="container">
+        <div class="movie-grid" id="watchlist-grid"><!-- filled by JS --></div>
+        <div class="empty-state" id="watchlist-empty" hidden>
+          <div class="empty-icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M6 3h12a1 1 0 0 1 1 1v16.5l-7-4-7 4V4a1 1 0 0 1 1-1z"/></svg>
+          </div>
+          <h3>Your watchlist is empty</h3>
+          <p>Find movies you like and add them here to watch later.</p>
+          <a href="index.html" class="btn btn-primary">Browse Movies</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer is rendered here by js/main.js -->
+  <div id="site-footer"></div>
+
+  <script src="js/movies.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

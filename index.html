@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MovieSuggest — Discover your next favorite movie.</title>
+  <meta name="description" content="MovieSuggest is a movie recommendation platform. Discover trending, popular and top rated movies.">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+
+  <!-- Navbar is rendered here by js/main.js -->
+  <div id="site-header"></div>
+
+  <main>
+
+    <!-- ================= HERO (featured movie: Interstellar) ================= -->
+    <section class="hero" id="hero">
+      <div class="hero-bg" style="background-image:url('https://image.tmdb.org/t/p/original/xJHokMbljvjADYdit5fK5VQsXEG.jpg')"></div>
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <span class="kicker">Featured film</span>
+        <h1 class="hero-title">Interstellar</h1>
+        <div class="hero-meta">
+          <span class="chip chip-rating">★ 8.7</span>
+          <span class="chip">2014</span>
+          <span class="chip">169 min</span>
+          <span class="chip">Sci-Fi</span>
+          <span class="chip">Drama</span>
+          <span class="chip">Adventure</span>
+        </div>
+        <p class="hero-overview">A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival. Mankind's next step will be our greatest.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=Interstellar+official+trailer">▶ Watch Trailer</a>
+          <a class="btn btn-ghost" href="movie.html?id=1">View Details</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TRENDING NOW ================= -->
+    <section class="section" id="trending">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2 class="section-title">Trending Now</h2>
+            <p class="section-sub">What people are watching this week</p>
+          </div>
+          <a href="#movies" class="view-all">View all →</a>
+        </div>
+        <div class="movie-row" id="trending-row"><!-- filled by JS --></div>
+      </div>
+    </section>
+
+    <!-- ================= POPULAR MOVIES ================= -->
+    <section class="section" id="popular">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2 class="section-title">Popular Movies</h2>
+            <p class="section-sub">Audience favorites across the catalog</p>
+          </div>
+          <a href="#movies" class="view-all">View all →</a>
+        </div>
+        <div class="movie-grid" id="popular-grid"><!-- filled by JS --></div>
+      </div>
+    </section>
+
+    <!-- ================= TOP RATED ================= -->
+    <section class="section" id="toprated">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2 class="section-title">Top Rated</h2>
+            <p class="section-sub">The highest rated movies in the catalog</p>
+          </div>
+          <a href="#movies" class="view-all">View all →</a>
+        </div>
+        <div class="movie-grid" id="toprated-grid"><!-- filled by JS --></div>
+      </div>
+    </section>
+
+    <!-- ================= RECOMMENDED FOR YOU ================= -->
+    <section class="section" id="recommended">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2 class="section-title">Recommended For You</h2>
+            <p class="section-sub">Picked based on movies you liked</p>
+          </div>
+        </div>
+        <p class="rec-note" id="rec-note" hidden><!-- filled by JS --></p>
+        <div class="movie-grid" id="recommended-grid"><!-- filled by JS --></div>
+      </div>
+    </section>
+
+    <!-- ================= BROWSE BY GENRE ================= -->
+    <section class="section" id="genres">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2 class="section-title">Other Movies</h2>
+            <p class="section-sub">Click a genre to filter the catalog below</p>
+          </div>
+        </div>
+        <div class="genre-grid" id="genre-grid"><!-- filled by JS --></div>
+      </div>
+    </section>
+
+    <!-- ================= ALL MOVIES (filterable) ================= -->
+    <section class="section" id="movies">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2 class="section-title" id="all-movies-title">All Movies</h2>
+            <p class="section-sub" id="all-movies-count"></p>
+          </div>
+          <button type="button" class="btn btn-ghost btn-sm" id="clear-genre" hidden>Clear filter</button>
+        </div>
+        <div class="genre-chips" id="genre-chips"><!-- filled by JS --></div>
+        <div class="movie-grid" id="all-movies-grid"><!-- filled by JS --></div>
+        <div class="empty-state" id="movies-empty" hidden>
+          <h3>No movies found</h3>
+          <p>We couldn't find any movies for this genre.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer is rendered here by js/main.js -->
+  <div id="site-footer"></div>
+
+  <script src="js/movies.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
